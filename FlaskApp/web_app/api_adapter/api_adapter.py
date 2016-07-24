@@ -22,14 +22,14 @@ class API_adapter(object):
         params = {
             'term': 'food',
             'location': location,
-            'cc' : 'US',
+            'cc' : 'US'
         }
         if category_filter:
             params['category_filter'] = category_filter
 
-        a = self.client.search(**params)
-        b = [i.name for i in a.businesses]
-        return b
+        restaurant = self.client.search(**params)
+        restaurant = self.get_random(restaurant)
+        return restaurant
 
     # get a random restaurant
     def get_random(self, res):

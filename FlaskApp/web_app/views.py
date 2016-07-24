@@ -14,8 +14,8 @@ def test_get(location, cata):
     adapter = api_adapter.API_adapter()
     restaurant = adapter.get_restaurant(location=location, category_filter=cata)
 
-    return str(restaurant)
-    return json.dumps(restaurant)
+    return str(restaurant.name)
+
 
 
 @app.route("/save/favorite", methods=['post'])
