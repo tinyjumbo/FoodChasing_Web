@@ -12,9 +12,9 @@ def show_index_page():
 @app.route("/test/<string:location>/<string:cata>")
 def test_get(location, cata):
     adapter = api_adapter.API_adapter()
-    restaurant = adapter.get_restaurant(location=location, category_filter=cata)
-
-    return str(restaurant.name)
+    restaurants = adapter.get_restaurant(location=location, category_filter=cata)
+    restaurants = [i.name for i in restaurants]
+    return str(restaurants)
 
 
 
@@ -23,7 +23,6 @@ def test_post():
     '''
     To be implemented with DB connection
     '''
-
     print(request.json)
     return("Success!")
 

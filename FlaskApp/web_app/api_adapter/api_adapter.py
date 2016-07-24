@@ -28,11 +28,5 @@ class API_adapter(object):
             params['category_filter'] = category_filter
 
         restaurant = self.client.search(**params)
-        restaurant = self.get_random(restaurant)
-        return restaurant
+        return restaurant.businesses
 
-    # get a random restaurant
-    def get_random(self, res):
-        restaurant = res.businesses
-        index = randint(0, len(restaurant)-1)
-        return restaurant[index]
