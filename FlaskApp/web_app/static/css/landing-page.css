@@ -42,13 +42,47 @@ h6 {
 #websitename{
     
     color:white;
-    border-color:white;
+    border-color:#fff;
+   
 }
 
+#linkedin{
+    color:white;
+}
+#github{
+    color:white;
+}
 #login{
     
     color:white;
 }
+
+#linkedin{
+    
+    
+    overflow:visible;
+    position:relative;
+}
+
+#linkedinspan{
+    
+    margin-right:170px;
+    float:right;
+    
+   width:200px;
+    padding:10px;
+    background: rgba(0, 0, 0, 0.5);
+    
+    
+    
+}
+
+#linkedinspan > a{
+    
+    color:white;
+    font-size: 15px;
+}
+
 .intro-header {
     padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
     padding-bottom: 50px;
@@ -127,6 +161,8 @@ h6 {
 }
 
 
+
+
  
 #go-safe{
     
@@ -137,6 +173,7 @@ h6 {
 #go-safe{
     
     width:100%;
+    background-color:rgba(255, 255, 255, 0.75);
 }
 
 .content-section-a {
@@ -182,10 +219,13 @@ h6 {
     margin-top: 0;
 }
 
-
+#go-adventure{
+    
+    background-color:rgba(255, 255, 255, 0.75);
+}
 #adventure{
     display:block;
-    background-color:#fff;
+    background-color:rgba(255, 255, 255, 0.75);
     color:#333;
     width:100%;
     border-color:#ccc;
@@ -194,6 +234,11 @@ h6 {
     line-height:1.333333;
     border-radius:6px;
     
+    
+}
+
+#back{
+    background-color:rgba(255, 255, 255, 0.75);
     
 }
 @media(max-width:1199px) {

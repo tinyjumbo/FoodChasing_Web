@@ -28,6 +28,11 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <script src="https://code.jquery.com/jquery-2.1.0.min.js" integrity="sha256-8oQ1OnzE2X9v4gpRVRMb1DWHoPHJilbur1LP9ykQ9H0=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../static/js/bootstrap.js"> </script>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script   src="https://code.jquery.com/jquery-1.9.1.min.js"   integrity="sha256-wS9gmOZBqsqWxgIVgA8Y9WcQOa7PgSIX+rPA0VL2rbQ="   crossorigin="anonymous"></script>
+      <script   src="https://code.jquery.com/ui/1.10.0/jquery-ui.min.js"   integrity="sha256-hTpbeVXhgCmfO7nGcWp9d1kImKbzY6gN0Vo5u5wLuss="   crossorigin="anonymous"></script>  
+
     
     
        <script type="text/javascript">
@@ -50,7 +55,51 @@
                  $("#go-safe").show();
                  
              });
+             $(document).tooltip({
+                content: function () {
+                   return $('#hi').prop('title');
+        },
+        show: null, 
+        close: function (event, ui) {
+            ui.tooltip.hover(
+
+            function () {
+                $(this).stop(true).fadeTo(400, 1);
+            },
+
+            function () {
+                $(this).fadeOut("400", function () {
+                    $(this).remove();
+                })
+            });
+        }
+    });
+             
          });
+           
+           $(function () {
+    $(document).tooltip({
+        content: function () {
+            return $("#linkedin").prop('title');
+        },
+        show: null, 
+        close: function (event, ui) {
+            ui.tooltip.hover(
+
+            function () {
+                $(this).stop(true).fadeTo(400, 1);
+            },
+
+            function () {
+                $(this).fadeOut("400", function () {
+                    $(this).remove();
+                })
+            });
+        }
+    });
+});
+           
+             
       </script>
     
     
@@ -79,8 +128,17 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
+                        <a href="#" id="linkedin" title="<span id='linkedinspan'><a href='https://www.linkedin.com/in/keran-chen-0484196a'>Keran Chen</a><br/><br/><a href='https://www.linkedin.com/in/zhihui-zach-qiu-295a088a'>Zach Qiu</a></span>">LinkedIn</a>
+                        
+                    </li>
+                    
+                    <li>
+                       <a href="https://github.com/tinyjumbo/FoodChasing_Web" id="github">Github</a>
+                    </li>
+                    <li>
                         <a href="#" id="login">Login</a>
                     </li>
+                    
                     
                 </ul>
             </div>
@@ -101,8 +159,8 @@
                         <h1><span class="title">Explore It!</span></h1>
                         <h3>Where is your next adventure?</h3>
                         <hr class="intro-divider">
-                        <ul class="list-inline intro-social-buttons">
-                            <li>
+                        <ul id="thefun" class="list-inline intro-social-buttons">
+                            <li id="left">
                                  <button type="button" id="go-adventure" class="btn btn-default btn-lg"><span class="network-name"> Go Adventure</span> </button>
                                  <form method="get" name="adventure" id="adventure" action="http://cscie12.dce.harvard.edu/echo" enctype="application/x-www-form-urlencoded">
                                      <fieldset id="adventureform">
@@ -149,7 +207,7 @@
                                 </form>
                                 <button id="back" class="btn btn-default btn-lg"> Go Back</button>
                             </li>
-                            <li>
+                            <li id="right">
                                 <a href="#" id="go-safe" class="btn btn-default btn-lg"> <span class="network-name">Go Safe</span></a>
                             </li>
                             
