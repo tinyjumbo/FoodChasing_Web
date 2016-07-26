@@ -26,11 +26,12 @@ def test_post():
     print(request.json)
     return("Success!")
 
+
+
 """
 curl -i http://127.0.0.1:5000/{location}/{food_cata}
 
 curl -i -H "Content-Type: application/json" -X POST -d '{"title":"Read a book"}' http://127.0.0.1:5000/save/favorite
-
 
 http://blog.miguelgrinberg.com/post/designing-a-restful-api-with-python-and-flask
 """
