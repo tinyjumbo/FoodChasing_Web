@@ -1,9 +1,8 @@
 from yelp.oauth1_authenticator import Oauth1Authenticator
 from yelp.client import Client
 from random import randint
-import json
+import json, os, sys
 import io
-import os, sys
 
 class API_adapter(object):
 
