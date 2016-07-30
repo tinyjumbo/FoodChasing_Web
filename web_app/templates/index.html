@@ -55,25 +55,7 @@
                  $("#go-safe").show();
                  
              });
-             $(document).tooltip({
-                content: function () {
-                   return $('#hi').prop('title');
-        },
-        show: null, 
-        close: function (event, ui) {
-            ui.tooltip.hover(
-
-            function () {
-                $(this).stop(true).fadeTo(400, 1);
-            },
-
-            function () {
-                $(this).fadeOut("400", function () {
-                    $(this).remove();
-                })
-            });
-        }
-    });
+             
              
          });
            
@@ -128,7 +110,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="#" id="linkedin" title="<span id='linkedinspan'><a href='https://www.linkedin.com/in/keran-chen-0484196a'>Keran Chen</a><br/><br/><a href='https://www.linkedin.com/in/zhihui-zach-qiu-295a088a'>Zach Qiu</a></span>">LinkedIn</a>
+                        <a href="#" id="linkedin" title="<span id='linkedinspan'><i class='fa fa-linkedin fa-fw'></i><a href='https://www.linkedin.com/in/keran-chen-0484196a'>Keran Chen</a><br/><br/><i class='fa fa-linkedin fa-fw'></i><a href='https://www.linkedin.com/in/zhihui-zach-qiu-295a088a'>Zach Qiu</a></span>">LinkedIn</a>
                         
                     </li>
                     
@@ -156,7 +138,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="intro-message">
-                        <h1><span class="title">Explore It!</span></h1>
+                        <h1><span class="title">Explore it!</span></h1>
                         <h3>Where is your next adventure?</h3>
                         <hr class="intro-divider">
                         <ul id="thefun" class="list-inline intro-social-buttons">
@@ -278,7 +260,7 @@
 
             <div class="row">
                 <div class="col-lg-6">
-                    <h2>Connect to :</h2>
+                    <h2>More Food Adventure</h2>
                 </div>
                 <div class="col-lg-6">
                     <ul class="list-inline banner-social-buttons">
@@ -323,7 +305,7 @@
                             <a href="#contact">Contact</a>
                         </li>
                     </ul>
-                    <p class="copyright text-muted small">Copyright &copy; Your Company 2014. All Rights Reserved</p>
+                    <p class="copyright text-muted small"> Food Adventure</p>
                 </div>
             </div>
         </div>
