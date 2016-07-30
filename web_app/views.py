@@ -18,9 +18,10 @@ def show_random():
     adapter = api_adapter.API_adapter()
     restaurants = adapter.get_restaurant(location=location, category_filter=cata)
     url = restaurants[0].url
+    name = restaurants[0].name
     worker = crawler()
     images = worker.get_images(url)
-    return render_template('result_test.html', images=images)
+    return render_template('result_test.html', images=images, name=name)
 
 # api test page
 @app.route("/test/<string:location>/<string:cata>")
@@ -30,8 +31,7 @@ def test_get(location, cata):
     restaurants = [i.name for i in restaurants]
     return str(restaurants)
 
-
-
+# save my favorite
 @app.route("/save/favorite", methods=['post'])
 def test_post():
     '''
