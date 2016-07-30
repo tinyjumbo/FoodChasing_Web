@@ -1,12 +1,26 @@
-from flask import render_template, request
-from . import app
 from web_app.api_adapter import api_adapter
+from flask import render_template, request
+from web_app.crawler.crawler import crawler
+from . import app
 import json
 
 # index page
 @app.route("/")
 def show_index_page():
     return render_template('index.html')
+
+
+# result page
+@app.route("/result", methods=['GET'])
+def show_random():
+    location = request.args.get('location')
+    cata = request.args.get('cata')
+    adapter = api_adapter.API_adapter()
+    restaurants = adapter.get_restaurant(location=location, category_filter=cata)
+    url = restaurants[0].url
+    worker = crawler()
+    images = worker.get_images(url)
+    return str(images)
 
 # api test page
 @app.route("/test/<string:location>/<string:cata>")
