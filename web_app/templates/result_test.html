@@ -117,7 +117,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="intro-message">
-                        <h1><span class="title">Wow Barbecue</span></h1>
+                        <h1><span class="title">{{name}}</span></h1>
                         <h3>A Next Food Adventure to be</h3>
                         <hr class="intro-divider">
                        <i class="belong-anywhere__icon icon icon-video-play text-contrast text-jumbo"></i>
@@ -144,11 +144,10 @@
                 <div class="col-sm-4 portfolio-item">
                     <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
-                            <div id="gallery0" class="caption-content">
-                                <img src={{image}} alt="">
-                            </div>
+                            <a class="thumbnail" href="#">
+                                <img class="img-responsive" src="{{ image }}" alt="">
+                            </a>
                         </div>
-                        <img src="img/portfolio/cabin.png" class="img-responsive" alt="">
                     </a>
                 </div>
                 {% endfor %}
