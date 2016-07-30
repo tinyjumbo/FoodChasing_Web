@@ -41,14 +41,7 @@
   
     
       
-    var data = {"image_url": ["https://s3-media4.fl.yelpcdn.com/bphoto/SbKRO-_J4jQ-x1VqCZrD4Q/ms.jpg", "https://s3-media2.fl.yelpcdn.com/bphoto/VBrvAF8KlHs8di6R1na0JA/ms.jpg", "https://s3-media2.fl.yelpcdn.com/bphoto/ihMvCggW0OJJjLcpSjieOg/ms.jpg", "https://s3-media4.fl.yelpcdn.com/bphoto/bHVb5FeZmGlL3WTuu091dA/ms.jpg", "https://s3-media4.fl.yelpcdn.com/bphoto/UicKza-6ymNENEJhKYY0UA/ms.jpg", "https://s3-media4.fl.yelpcdn.com/bphoto/iV_K9TCxHZ-vlewDbxnwkw/ms.jpg", "https://s3-media3.fl.yelpcdn.com/bphoto/W3_Zhzp3Chr5edMYdK8aZw/ms.jpg", "https://s3-media4.fl.yelpcdn.com/bphoto/rvezjlTjhXuj8ClpCOewag/ms.jpg", "https://s3-media4.fl.yelpcdn.com/bphoto/z0tK6DQf5gw83-GYN19W0w/ms.jpg", "https://s3-media4.fl.yelpcdn.com/bphoto/udbPK8RNRp7gyNkfY4A57w/ms.jpg", "https://s3-media4.fl.yelpcdn.com/bphoto/vYNeZDhMYpHNiikflDF7hg/ms.jpg", "https://s3-media4.fl.yelpcdn.com/bphoto/T63DV-RwYcvELIjZZfy2vQ/ms.jpg", "https://s3-media4.fl.yelpcdn.com/bphoto/0Ms0c-lvr9iatMDae9frsQ/ms.jpg", "https://s3-media3.fl.yelpcdn.com/bphoto/5TukXBnJlzp4x0SaUEGorg/ms.jpg", "https://s3-media4.fl.yelpcdn.com/bphoto/Ln3RBvl1xjjcJ8d87lMO2A/ms.jpg", "https://s3-media4.fl.yelpcdn.com/bphoto/YC90n6uXjvmKlX412dIT2g/ms.jpg", "https://s3-media1.fl.yelpcdn.com/bphoto/TkWlP1dvfm_5t_kv8g1RSw/ms.jpg", "https://s3-media1.fl.yelpcdn.com/bphoto/swrAirCLTjiNSFgA51-Y2Q/ms.jpg", "https://s3-media2.fl.yelpcdn.com/bphoto/XxhDPFpf7e_IA1aYe92QQg/ms.jpg", "https://s3-media4.fl.yelpcdn.com/bphoto/kmzVGc0LTp4KZJnVp3H5_g/ms.jpg"]};
-    
-
-    var $img = $("<img />").attr('src', data.image_url[0]);
-  $('#gallery0').append($img);
-    console.log(data.image_url[0]);
-
-});
+   
 
         
          
@@ -147,6 +140,7 @@
                 </div>
             </div>
             <div class="row">
+                {%for image in get_flashed_images()%} 
                 <div class="col-sm-4 portfolio-item">
                     <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
@@ -157,56 +151,8 @@
                         <img src="img/portfolio/cabin.png" class="img-responsive" alt="">
                     </a>
                 </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div id = "gallery1" class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/cake.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div id = "gallery2" class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/circus.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i id = "gallery3"class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/game.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i id="gallery4" class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/safe.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i id = "gallery5" class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/submarine.png" class="img-responsive" alt="">
-                    </a>
-                </div>
+                {% endfor%}
+               
             </div>
         </div>
     </section>
