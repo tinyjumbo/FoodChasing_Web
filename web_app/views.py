@@ -20,7 +20,7 @@ def show_random():
     url = restaurants[0].url
     worker = crawler()
     images = worker.get_images(url)
-    return str(images)
+    return render_template('result_test.html', images=images)
 
 # api test page
 @app.route("/test/<string:location>/<string:cata>")
