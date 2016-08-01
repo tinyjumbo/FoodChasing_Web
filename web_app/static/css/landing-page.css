@@ -316,3 +316,11 @@ p.copyright {
 #bootstraplink{
     margin-left: 5px;
 }
+
+input.error { border: thin solid red; }
+  label.error {
+      background: url('red_x.gif') no-repeat;
+      padding-left: 20px;
+      margin-left: 0.5em;
+      color: red;
+  }
