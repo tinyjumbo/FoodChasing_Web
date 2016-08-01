@@ -280,3 +280,39 @@ footer {
 p.copyright {
     margin: 15px 0 0;
 }
+
+#bottonname{
+    display: inline-block;
+    clear:none;
+    margin-left:0px;
+   
+    
+    width:60%;
+}
+
+#bottonname h2{
+    
+    font-size:35px;
+}
+
+#bottonlinks{
+    display: inline-block;
+    float: right;
+    
+    clear:none;
+}
+
+#techword{
+    
+    font-size:20px;
+    color: gray;
+}
+#yelp{
+    
+    width:45px;
+    height:45px;
+}
+
+#bootstraplink{
+    margin-left: 5px;
+}

@@ -80,7 +80,27 @@
         }
     });
 });
-           
+        $(function () {
+    $(document).tooltip({
+        content: function () {
+            return $("#bottonlinkedin").prop('title');
+        },
+        show: null, 
+        close: function (event, ui) {
+            ui.tooltip.hover(
+
+            function () {
+                $(this).stop(true).fadeTo(400, 1);
+            },
+
+            function () {
+                $(this).fadeOut("400", function () {
+                    $(this).remove();
+                })
+            });
+        }
+    });
+});   
              
       </script>
     
@@ -139,7 +159,7 @@
                 <div class="col-lg-12">
                     <div class="intro-message">
                         <h1><span class="title">Explore it!</span></h1>
-                        <h3>Where is your next adventure?</h3>
+                        <h3>Where is your next food adventure?</h3>
                         <hr class="intro-divider">
                         <ul id="thefun" class="list-inline intro-social-buttons">
                             <li id="left">
@@ -245,22 +265,23 @@
 	<a  name="contact"></a>
     <div class="banner">
 
-        <div class="container">
+        <div class="container" >
 
-            <div class="row">
-                <div class="col-lg-6">
-                    <h2>More Food Adventure</h2>
+            <div  class="row">
+                <div id="bottonname" class="col-lg-6">
+                    <h2>Food Adventure<br/> Your Everyday Adventure</h2>
                 </div>
-                <div class="col-lg-6">
+                <div id="bottonlinks" class="col-lg-6">
                     <ul class="list-inline banner-social-buttons">
+                         <li>
+                            <a href="https://www.facebook.com/foodchasing/?skip_nax_wizard=true" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
+                        </li>
+                       
                         <li>
-                            <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                            <a href="https://github.com/tinyjumbo/FoodChasing_Web" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
                         </li>
                         <li>
-                            <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                        </li>
-                        <li>
-                            <a href="#" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
+                            <a href="#" id="bottonlinkedin"class="btn btn-default btn-lg" title="<span id='linkedinspan'><i class='fa fa-linkedin fa-fw'></i><a href='https://www.linkedin.com/in/keran-chen-0484196a'>Keran Chen</a><br/><br/><i class='fa fa-linkedin fa-fw'></i><a href='https://www.linkedin.com/in/zhihui-zach-qiu-295a088a'>Zach Qiu</a></span>"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
                         </li>
                     </ul>
                 </div>
@@ -275,26 +296,39 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="row">
+            <div class="row" >
                 <div class="col-lg-12">
+                    <h6 id="techword">Supporting Technology powered by:</h6>
                     <ul class="list-inline">
                         <li>
-                            <a href="#">Home</a>
+                            <img id="python_icon" src="../static/img/Python.svg"><a href="https://www.python.org/">Python 3.4</a>
                         </li>
                         <li class="footer-menu-divider">&sdot;</li>
                         <li>
-                            <a href="#about">About</a>
+                            <img src="../static/img/docker.png"><a href="https://www.docker.com/">Docker</a>
                         </li>
                         <li class="footer-menu-divider">&sdot;</li>
                         <li>
-                            <a href="#services">Services</a>
+                            <img id="yelp" src="../static/img/Yelp.svg"><a href="https://www.yelp.com/developers/documentation/v2/overview">  Yelp API</a>
                         </li>
                         <li class="footer-menu-divider">&sdot;</li>
                         <li>
-                            <a href="#contact">Contact</a>
+                            <img src="../static/img/bootstrap.png"><a id="bootstraplink" href="http://getbootstrap.com/">  Bootstrap</a>
+                        </li>
+                         <li class="footer-menu-divider">&sdot;</li>
+                         <li>
+                            <img src="../static/img/flask.png"><a  href="http://flask.pocoo.org/">  Flask</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                         <li>
+                            <img src="../static/img/jquery.png"><a  href="https://jquery.com/">  Jquery</a>
+                        </li>
+                         <li class="footer-menu-divider">&sdot;</li>
+                         <li>
+                            <img src="../static/img/jinja.png"><a  href="http://jinja.pocoo.org/">  Jinja</a>
                         </li>
                     </ul>
-                    <p class="copyright text-muted small"> Food Adventure</p>
+                    <p class="copyright text"> Food Adventure</p><p id="author" class="copyright text-muted small">By Keran & Zach</p>
                 </div>
             </div>
         </div>
