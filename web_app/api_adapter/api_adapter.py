@@ -28,4 +28,3 @@ class API_adapter(object):
 
         restaurant = self.client.search(**params)
         return restaurant.businesses
-
