@@ -1,6 +1,7 @@
 from web_app.api_adapter import api_adapter
-from flask import render_template, request
 from web_app.crawler.crawler import crawler
+from flask import render_template, request
+from random import randint
 from . import app
 import json
 
@@ -17,8 +18,10 @@ def show_random():
     cata = request.args.get('cata')
     adapter = api_adapter.API_adapter()
     restaurants = adapter.get_restaurant(location=location, category_filter=cata)
-    url = restaurants[0].url
-    name = restaurants[0].name
+    # pick a random restaurant
+    index = randint(0,len(restaurants)-1)
+    url = restaurants[index].url
+    name = restaurants[index].name
     worker = crawler()
     images = worker.get_images(url)
     return render_template('result_test.html', images=images, name=name)
