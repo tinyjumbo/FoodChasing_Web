@@ -96,12 +96,14 @@ h6 {
     background: url(../img/french_restaurant.jpg) no-repeat center center;
     background-size: cover;
     background-attachment:fixed;
+    height:600px;
+    
 }
 
 .intro-message {
     position: relative;
-    padding-top: 20%;
-    padding-bottom: 20%;
+    padding-top: 15%;
+    padding-bottom: 30%;
 }
 
 .intro-message > h1 {
@@ -208,7 +210,10 @@ h6 {
     color: #f8f8f8;
     background: url(../img/Plated-Dinner.jpg) no-repeat center center;
     background-size: cover;
+    height:250px;
 }
+
+
 
 .banner h2 {
     margin: 0;
@@ -216,13 +221,18 @@ h6 {
     font-size: 3em;
 }
 
-.banner ul {
-    margin-bottom: 0;
-}
+
 
 .banner-social-buttons {
     float: right;
     margin-top: 0;
+}
+
+#bannermessage{
+    
+    padding-top: 0px;
+    
+    
 }
 
 #go-adventure{
@@ -239,6 +249,8 @@ h6 {
     font-size:18px;
     line-height:1.333333;
     border-radius:6px;
+   box-sizing:border-box;
+    
     
     
 }
@@ -278,8 +290,12 @@ footer {
 }
 
 p.copyright {
-    margin: 15px 0 0;
+    
+    margin: 0 0 0;
+   
+    
 }
+
 
 #bottonname{
     display: inline-block;
@@ -324,3 +340,4 @@ input.error { border: thin solid red; }
       margin-left: 0.5em;
       color: red;
   }
+
