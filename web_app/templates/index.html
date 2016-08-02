@@ -27,6 +27,8 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    
+  
     <script src="https://code.jquery.com/jquery-2.1.0.min.js" integrity="sha256-8oQ1OnzE2X9v4gpRVRMb1DWHoPHJilbur1LP9ykQ9H0=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="../static/js/bootstrap.js"> </script>
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
@@ -34,7 +36,7 @@
       <script   src="https://code.jquery.com/ui/1.10.0/jquery-ui.min.js"   integrity="sha256-hTpbeVXhgCmfO7nGcWp9d1kImKbzY6gN0Vo5u5wLuss="   crossorigin="anonymous"></script>  
     
     
-    <script src="https://code.jquery.com/jquery-2.2.2.min.js" type="text/javascript"></script>
+   <!-- <script src="https://code.jquery.com/jquery-2.2.2.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/jquery.validate.min.js">
 </script>
 <script type="text/javascript">
@@ -47,7 +49,8 @@ $(document).ready(function(){
     }
   });
 });
-</script>
+</script> -->
+    
 
     
     
@@ -63,17 +66,35 @@ $(document).ready(function(){
                  $("#back").fadeIn('slow');
                  
                  $("#go-safe").hide();
+                 $(".title").hide();
+                 $("#the_words").hide();
+                 $(".intro-divider").hide();
+                 $("#title").hide();
+                 $("#go-adventure").hide();
                  
              });
-             $("#back").click(function(){
-                 $("#adventure").hide();
-                 $("#back").hide();
-                 $("#go-safe").show();
-                 
-             });
+             
              
              
          });
+           $(document).mouseup(function (e){
+                var container = $("#adventure");
+
+                if (!container.is(e.target) 
+                   && container.has(e.target).length === 0) {
+                           container.hide();
+                           $("#go-safe").show();
+                           $("#back").hide();
+                           $(".title").fadeIn('slow');
+                           $("#the_words").show();
+                           $(".intro-divider").show();
+                           $("#title").show();
+                           $("#go-adventure").show();
+                      }
+            });
+           
+           
+             
            
            $(function () {
     $(document).tooltip({
@@ -120,7 +141,7 @@ $(document).ready(function(){
              
       </script>
     
-    
+   
 
 </head>
     
@@ -174,19 +195,22 @@ $(document).ready(function(){
             <div class="row">
                 <div class="col-lg-12">
                     <div class="intro-message">
-                        <h1><span class="title">Explore it!</span></h1>
-                        <h3>Where is your next food adventure?</h3>
+                        <h1 id="title"><span class="title">Explore it!</span></h1>
+                        <h3 id="the_words">Where is your next food adventure?</h3>
                         <hr class="intro-divider">
                         <ul id="thefun" class="list-inline intro-social-buttons">
                             <li id="left">
+                                
+                                 
                                  <button type="button" id="go-adventure" class="btn btn-default btn-lg"><span class="network-name"> Go Adventure</span> </button>
+                                
                                  <form method="get" name="adventure" id="adventure" action="/result" enctype="application/x-www-form-urlencoded">
                                      <fieldset id="adventureform">
                                          <legend>Your Adventure</legend>
                                          <p>
                                              <label for="zip">zip code</label> 
                                                :<br/>
-                                             <input id="zip" type="text" name="location"  class="required"/>
+                                             <input id="zip" type="text" name="location"  class="required" size="20"/>
                                              <br/>
                                              <label for="type">Food Type</label>
                                              <br/>
@@ -212,7 +236,8 @@ $(document).ready(function(){
                                       <input type="submit" value="GO!"><br>
                                       
                                 </form>
-                                <button id="back" class="btn btn-default btn-lg"> Go Back</button>
+                               
+                                
                             </li>
                             <li id="right">
                                 <a href="#" id="go-safe" class="btn btn-default btn-lg"> <span class="network-name">Go Safe</span></a>
@@ -279,11 +304,11 @@ $(document).ready(function(){
     <!-- /.content-section-a -->
 
 	<a  name="contact"></a>
-    <div class="banner">
+    <div class="banner" >
 
         <div class="container" >
 
-            <div  class="row">
+            <div  id="bannermessage" class="row">
                 <div id="bottonname" class="col-lg-6">
                     <h2>Food Adventure<br/> Your Everyday Adventure</h2>
                 </div>
@@ -344,7 +369,18 @@ $(document).ready(function(){
                             <img src="../static/img/jinja.png"><a  href="http://jinja.pocoo.org/">  Jinja</a>
                         </li>
                     </ul>
-                    <p class="copyright text"> Food Adventure</p><p id="author" class="copyright text-muted small">By Keran & Zach</p>
+                    <ul class="list-inline">
+                        <li>
+                    <p class="copyright text"> Food Adventure</p>
+                            </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                        <p id="author" class="copyright text-muted small">Created By Keran & Zach</p>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li><p class="copyright text-muted small">
+                            Aug. 2016</p></li>
+                    </ul>
                 </div>
             </div>
         </div>
