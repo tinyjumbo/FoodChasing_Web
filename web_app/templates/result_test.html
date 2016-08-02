@@ -113,10 +113,6 @@
     
         <div class="intro-header">
        
-
-           
-               
-                    
                         <h1><span class="title">{{name}}</span></h1>
                         <h3>A Next Food Adventure to be</h3>
                         <hr class="intro-divider">
@@ -124,14 +120,14 @@
                         <a id="next_link" href="#">
                             <img id="next_icon" src="../static/img/next_icon.svg"></a>
                          <div id="info">
-                             <div>{{location}}</div>
+                             <div><a href="https://www.google.com/maps/place/{{addr}}">{{addr}}</a></div>
         <ul class="list-inline">
             
             <li>{{phone}}</li>
             <li class="footer-menu-divider">&sdot;</li>
-            <li>{{hours}}</li>
+            <li>{{is_open}}</li>
             <li class="footer-menu-divider">&sdot;</li>
-            <li><a href="{{yelplink}}">More Info</a></li>
+            <li><a href="{{url}}">More Info</a></li>
         </ul>
     </div>
                    
