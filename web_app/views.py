@@ -10,6 +10,11 @@ import json
 def show_index_page():
     return render_template('index.html')
 
+# index page
+@app.route("/login.html")
+def show_login_page():
+    return render_template('login.html')
+
 # result page
 @app.route("/result", methods=['GET'])
 def show_random():
