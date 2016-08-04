@@ -32,7 +32,7 @@ def show_random():
     addr = ', '.join(restaurants.location.display_address)
     worker = crawler()
     images = worker.get_images(url)
-    return render_template('result_test.html', images=images, name=name, url=url, addr=addr, is_open=is_open, phone=phone)
+    return render_template('result.html', images=images, name=name, url=url, addr=addr, is_open=is_open, phone=phone)
 
 # api test page
 @app.route("/test/<string:location>/<string:cata>")
