@@ -153,7 +153,11 @@ h6 {
     }
 
     .intro-divider {
-        width: 100%;
+        width: 60%;
+    }
+    #go-adventure{
+        display:inline-block;
+        width:42%;
     }
 }
 .intro-social-buttons>li{
