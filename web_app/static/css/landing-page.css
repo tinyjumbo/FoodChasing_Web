@@ -136,6 +136,9 @@ h6 {
         font-size: 3em;
         
     }
+    .intro-message>h3{
+        font-size: 1.5em;
+    }
 
     ul.intro-social-buttons > li {
         display: block;
@@ -144,9 +147,9 @@ h6 {
        
     }
 
-    ul.intro-social-buttons > li:last-child {
-        margin-bottom: 0;
-        
+    #right{
+        display: inline-block;
+        width: 30%;
     }
 
     .intro-divider {
@@ -174,7 +177,7 @@ h6 {
 #go-safe{
     
     display: inline-block;
-    width:150%;
+    width:100%;
     background-color:pink;
 }
 

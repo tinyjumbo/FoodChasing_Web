@@ -39,6 +39,15 @@ header .intro-text .skills {
 /*the added stuffs*/
 
 /*nav bar*/
+#navinfo{
+    width:80%;
+    margin-right:10%;
+    margin-left:10%;
+    
+}
+#bs-example-navbar-collapse-1{
+    margin-right: 5px;
+}
 
 #foodnav{
     
@@ -143,26 +152,39 @@ h1 {
 
 #back_icon{
     
+   position:relative;
     width:80px;
     height: 80px;
     opacity:0.7;
     fill: white;
     clear: none;
     margin-right: 30%;
+    margin-bottom:20%;
+   
+    
+
+   
+    
+   
+    
 }
 
 
 
+
 #next_icon{
-    
+    position:relative;
     width:80px;
     height: 80px;
     opacity:0.7;
     fill: white;
     clear: none;
-    margin-left:30%;
+    
+    margin-left: 30%;
+    margin-bottom:20%;
+    
+    
 }
-
 #info{
     display:block;
     
@@ -176,11 +198,12 @@ h1 {
     right: 0;
     box-sizing: border-box;
     margin-bottom: 0px;
-    margin-top:0px;
+    margin-top:3px;
     width:100%;
     margin-left:0px;
-    height:82px;
+    height:15%;
     font-size:1.5em;
+    
 
     
    
@@ -188,6 +211,54 @@ h1 {
 #info .list-inline li a{
     color:white;
 }
+
+@media (max-width: 743px){
+#back_icon {
+    width:60px;
+    height: 60px;
+}
+    #next_icon{
+        width:60px;
+        height:60px;
+    }
+    .intro-header >h1{
+        font-size: 3em;
+    }
+    .intro-header > h3{
+        font-size: 1.5em;
+    }
+}
+
+@media (min-width: 1500px){
+    
+    
+    #address{
+        display:inline-block;
+        clear:none;
+        float:left;
+        font-size:0.8em;
+        margin-left:40%;
+    }
+    .list-inline{
+        clear:none;
+        float:left;
+        margin-left:2%;
+        font-size:0.8em;
+    }
+    #info{
+        height:10%;
+    }
+    #back_link{
+        margin-bottom: 40%;
+        
+    }
+    #next_link{
+        margin-bottom:40%;
+    }
+}
+
+
+
 
 
 /*---footer info--*/
