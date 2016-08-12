@@ -149,7 +149,7 @@ h6 {
 
     #right{
         display: inline-block;
-        width: 30%;
+        
     }
 
     .intro-divider {
@@ -157,7 +157,7 @@ h6 {
     }
     #go-adventure{
         display:inline-block;
-        width:42%;
+        
     }
 }
 .intro-social-buttons>li{
@@ -187,14 +187,23 @@ h6 {
 
 #go-safe{
     
-    width:100%;
+    width:180px;
     background-color:rgba(255, 255, 255, 0.75);
+   
+}
+
+#go-adventure{
+    
+    width:180px;
 }
 
 .content-section-a {
     padding: 50px 0;
     background-color: #f8f8f8;
+    
 }
+
+
 
 .content-section-b {
     padding: 50px 0;
