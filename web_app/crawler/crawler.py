@@ -11,5 +11,7 @@ class crawler(object):
         image_url = image_url.replace('biz', 'biz_photos')
         r = requests.get(image_url)
         text = r.text
-        res = [m for m in re.findall('src="(.*?\.jpg)" width="226"', text)]
+        res = [m for m in re.findall('src="(.*?258s\.jpg)"', text)]
         return res
+
+

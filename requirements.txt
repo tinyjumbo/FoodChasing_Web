@@ -1,4 +1,4 @@
 flask
-cherrypy
 yelp
 requests
+cherrypy
