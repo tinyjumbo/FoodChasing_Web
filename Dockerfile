@@ -22,8 +22,8 @@ ENV PYENV_ROOT $HOME/.pyenv
 ENV PATH $PYENV_ROOT/shims:$PYENV_ROOT/bin:$PATH
 
 
-RUN pyenv install 3.4.0
-RUN pyenv global 3.4.0
+RUN pyenv install 2.7.10
+RUN pyenv global 2.7.10
 
 
 
